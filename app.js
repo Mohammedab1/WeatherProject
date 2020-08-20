@@ -30,7 +30,7 @@ app.post("/" , function(req , res) {
       const wDescription = WeatherData.weather[0].description;
       const icon = WeatherData.weather[0].icon;
       const imgurl = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
-heroku logs --tail
+
       res.write("<p> The Weather is currently " + wDescription + " in "+ Query +"</p>");
       res.write("<h1>The temp in "+ Query+" is " + temp + "degrees Celsius</h1>");
       res.write("<img src = " + imgurl + ">");
